@@ -28,7 +28,7 @@ CREATE TABLE `manager` (
   `password` text NOT NULL,
   `privileges` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `manager` (
 
 LOCK TABLES `manager` WRITE;
 /*!40000 ALTER TABLE `manager` DISABLE KEYS */;
-INSERT INTO `manager` VALUES (4,'username','password','all');
+INSERT INTO `manager` VALUES (129,'username','password','all');
 /*!40000 ALTER TABLE `manager` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,7 +57,7 @@ CREATE TABLE `order_data` (
   KEY `pizza_id` (`pizza_id`),
   CONSTRAINT `order_data_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `pizza_order` (`id`),
   CONSTRAINT `order_data_ibfk_2` FOREIGN KEY (`pizza_id`) REFERENCES `pizza` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=652 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `order_data` (
 
 LOCK TABLES `order_data` WRITE;
 /*!40000 ALTER TABLE `order_data` DISABLE KEYS */;
-INSERT INTO `order_data` VALUES (18,14,78),(19,14,79),(20,14,80),(21,14,81);
+INSERT INTO `order_data` VALUES (646,214,834),(647,214,835),(648,214,836),(649,214,837),(650,215,834),(651,215,835);
 /*!40000 ALTER TABLE `order_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +84,7 @@ CREATE TABLE `pizza` (
   `price` decimal(4,2) NOT NULL,
   `available` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=840 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `pizza` (
 
 LOCK TABLES `pizza` WRITE;
 /*!40000 ALTER TABLE `pizza` DISABLE KEYS */;
-INSERT INTO `pizza` VALUES (78,'Cheese pizza','Cheese',26.33,1),(79,'Ham pizza','Cheese',26.33,1),(80,'Onion pizza','Cheese',26.33,1),(81,'Paprika pizza','Cheese',26.33,1);
+INSERT INTO `pizza` VALUES (834,'Cheese pizza','Cheese',26.33,1),(835,'Ham pizza','Cheese',26.33,1),(836,'Onion pizza','Cheese',26.33,1),(837,'Paprika pizza','Cheese',26.33,1),(838,'Old pizza','Paprika',22.43,0),(839,'Old cheese pizza','Paprika',22.43,0);
 /*!40000 ALTER TABLE `pizza` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +113,7 @@ CREATE TABLE `pizza_order` (
   `address` text NOT NULL,
   `done` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=216 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `pizza_order` (
 
 LOCK TABLES `pizza_order` WRITE;
 /*!40000 ALTER TABLE `pizza_order` DISABLE KEYS */;
-INSERT INTO `pizza_order` VALUES (14,'2018-08-15 21:43:47','Walter','Smith','999999999','Warsaw',0);
+INSERT INTO `pizza_order` VALUES (214,'2018-09-02 14:23:40','Walter','Smith','999999999','Warsaw',0),(215,'2018-09-02 14:23:41','Sam','White','777777777','Cracow',1);
 /*!40000 ALTER TABLE `pizza_order` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -135,4 +135,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-15 21:45:05
+-- Dump completed on 2018-09-02 14:28:51
